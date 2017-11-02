@@ -1,0 +1,50 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Instructions
+{% endblock %}
+
+
+
+{% block content %}
+
+<!--
+üäöß
+-->
+
+    <div class="box effect7">
+        
+        <div id="textDiv">  
+            <div id="nested"></div>  
+        </div>  
+    <script type="text/javascript">  
+        var div = document.getElementById("textDiv");  
+        var nestedDiv = document.getElementById("nested");  
+        if ({{ player.role|json }} == 'R') {
+            nestedDiv.textContent = "Rules for R. Lots of rules for R";  
+        } else if ({{ player.role|json }} == 'D' ) {
+            nestedDiv.textContent = "these are the rules for D. ";  
+        } else {
+            nestedDiv.textContent = "these are the rules for A. ";  
+
+        }
+
+        var text = "[" + div.textContent + "]";  
+    </script>  
+
+
+        <p>
+            There will be much more text here and maybe tables too
+        </p>
+
+        <p>
+            [...]
+        </p>
+    </div>
+
+
+
+    {% next_button %}
+
+{% endblock %}

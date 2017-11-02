@@ -1,0 +1,38 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Welcome
+{% endblock %}
+
+
+
+{% block content %}
+
+<!--
+üäöß
+-->
+
+    <div class="box effect7">
+        <p>
+            This will be our welcome screen.
+            Every participant will see it independent of treatment and role.
+        </p>
+
+        <p>
+            I would like to activiate the "next" button when all participants have arrived at the experiment.
+            But we still need to figure out how to do this.
+            I also would like to call it "continue", although that does not matter as in the German version the button
+            says "Weiter" and this is what I had in mind.
+        </p>
+
+        <p>
+            [...]
+        </p>
+    </div>
+
+
+
+    {% next_button %}
+
+{% endblock %}
